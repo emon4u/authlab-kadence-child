@@ -1,0 +1,650 @@
+/*!
+Theme Name: Authlab Kadence Child
+Theme URI: https://www.kadencewp.com/kadence-theme/
+Template: kadence
+Author: Emon Ahmed
+Author URI: https://github.com/emon4u/
+Description: A child theme of Kadence Theme for authlab fluent form website
+Version: 1.0.0
+License: GNU General Public License v3.0 (or later)
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: authlab-kadence-child
+*/
+
+/* Theme customization starts here
+-------------------------------------------------------------- */
+
+/*
+    Define Custom Font
+*/
+@font-face {
+    font-family: 'Mona Sans';
+    src: url('assets/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('assets/fonts/Mona-Sans.woff2') format('woff2-variations'),
+    url('assets/fonts/Mona-Sans.ttf') format('truetype');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Mona Sans' !important;
+}
+
+.authlab-gradient-text {
+    background: linear-gradient(90deg, #00D1FF 27.24%, #06F 72.93%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.wp-block-kadence-advancedheading a:hover {
+    color: inherit;
+}
+
+/*
+    Reset Default Buttons
+*/
+.kt-button.kt-btn-size-standard {
+    font-family: 'Mona Sans';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 22px 25px;
+    border-radius: 5px;
+}
+
+/*
+    Block Video Button
+*/
+.wp-block-video.presto-block-video.presto-provider-youtube {
+    border-radius: 22px;
+    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+/*
+    Demo Tabs CSS
+*/
+.authlab-demo-parent-tab .kb-tab-titles-wrap {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-left: 25px;
+}
+
+.authlab-demo-parent-tab .kb-tab-titles-wrap .kt-title-sub-text {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #868686;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+
+.authlab-demo-parent-tab .kt-tab-title:hover .kb-tab-titles-wrap .kt-title-sub-text,
+.authlab-demo-parent-tab .kt-tab-title-active .kb-tab-titles-wrap .kt-title-sub-text {
+    background-color: #fff;
+    color: #001222;
+}
+
+.authlab-demo-parent-tab .kt-tab-title .kb-svg-icon-wrap {
+    padding: 0;
+}
+
+.authlab-demo-parent-tab .kt-tab-title {
+    position: relative;
+}
+
+.authlab-demo-parent-tab .kt-tab-title::before {
+    content: "";
+    position: absolute;
+    left: 45.5px;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #e5e5e5;
+    transition: all 0.3s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.authlab-demo-parent-tab .kt-tab-title:hover::before,
+.authlab-demo-parent-tab .kt-tab-title-active .kt-tab-title::before {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.authlab-demo-inner-tab .kt-tab-title::before {
+    display: none;
+}
+
+.authlab-demo-inner-tab ul.kt-tabs-title-list {
+    background: #00295A;
+    padding: 15px 0 0 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+/*
+    Testimonials
+*/
+.authlab-testimonials .kt-testimonial-meta-wrap {
+    flex-direction: column;
+    margin: 0;
+}
+
+.authlab-testimonials .kt-testimonial-meta-wrap .kt-testimonial-meta-name-wrap,
+.authlab-testimonials .kt-testimonial-meta-wrap .kt-testimonial-occupation-wrap {
+    text-align: center;
+}
+
+.authlab-testimonials .kt-testimonial-rating-wrap .kt-svg-testimonial-rating-icon {
+    margin: 0 5px;
+}
+
+/*
+    Integration css
+*/
+.authlab-integration-wrap {
+    display: flex;
+}
+
+.authlab-integration-wrap .integration-filters {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 50px;
+}
+
+.authlab-integration-wrap .integration-filters ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.authlab-integration-wrap .integration-filters li {
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+    color: #001222;
+}
+
+.authlab-integration-wrap .integration-filters li.active {
+    color: #0976FF;
+    font-weight: 700;
+}
+
+.authlab-integration-wrap .filters-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 30px;
+}
+
+.authlab-integration-wrap .integration-items {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 0 -15px 0;
+}
+
+.authlab-integration-wrap .integration-item {
+    width: 33.3333%;
+    padding: 0 15px 30px;
+}
+
+.authlab-integration-wrap .integration-inner {
+    position: relative;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #d8dcf0;
+    background-color: #ffffff;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.authlab-integration-wrap .integration-icon {
+    margin-bottom: 25px;
+}
+
+.authlab-integration-wrap .integration-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.authlab-integration-wrap .integration-desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.authlab-integration-wrap .integration-inner:hover {
+    border-color: #0976FF;
+}
+
+/*
+    Title Search
+ */
+.authlab-title-search .wp-block-search__input {
+    border: none;
+    padding: 0;
+}
+
+.authlab-title-search .wp-block-search__inside-wrapper {
+    padding: 15px 20px;
+}
+
+.authlab-title-search button.wp-block-search__button.has-icon.wp-element-button {
+    order: -1;
+    margin: 4px 0 0;
+    padding: 0 10px 0 0;
+}
+
+.authlab-title-search .wp-block-search__input:focus {
+    box-shadow: none;
+}
+
+/*
+    Custom Menus
+*/
+.wp-block-navigation.authlab-footer-menu li a {
+    transition: 0.3s;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.wp-block-navigation.authlab-footer-menu li a:hover {
+    padding-left: 5px;
+    color: #0976FF;
+}
+
+.wp-block-navigation.authlab-footer-menu {
+    gap: 20px;
+}
+
+.wp-block-navigation.authlab-copyright-menu {
+    gap: 20px;
+}
+
+.wp-block-navigation.authlab-top-menu li a:hover,
+.wp-block-navigation.authlab-copyright-menu li a:hover {
+    color: #0976FF;
+}
+
+.wp-block-navigation.authlab-top-menu {
+    gap: 35px;
+}
+
+.wp-block-navigation.authlab-top-menu {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/*
+    Main menu css
+*/
+.authlab-navigation-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1;
+    gap: 10px;
+}
+
+.authlab-navigation-menu ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.authlab-navigation-menu ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+    color: #00295A;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.authlab-navigation-menu ul li a:hover {
+    color: #0976FF;
+}
+
+.authlab-navigation-menu .navbar-toggler {
+    width: 45px;
+    height: 40px;
+    border: 1px solid #00295A;
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.authlab-navigation-menu .navbar-toggler span {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: #00295A;
+    transition: 0.3s;
+}
+
+.authlab-navigation-menu .navbar-close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    width: 25px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 0;
+    display: none;
+    box-shadow: none;
+}
+
+.authlab-navigation-menu .navigation-overly {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.45s;
+}
+
+.authlab-navigation-menu .navbar-close span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #00295A;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.authlab-navigation-menu .navbar-close span:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.authlab-navigation-menu.color-white ul li a {
+    color: #ffffff;
+}
+
+.authlab-navigation-menu.color-white .navbar-toggler span,
+.authlab-navigation-menu.color-white .navbar-close span {
+    background-color: #ffffff;
+}
+
+.authlab-navigation-menu.color-white .navbar-toggler {
+    border-color: #fff;
+}
+
+/**
+    FAQ Accordion
+ */
+.authlab-faq-wrap .faq-filters {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.authlab-faq-wrap select.filter-category {
+    border: 1px solid #EAEAEA;
+    height: 50px;
+    width: 200px;
+    padding: 0 20px;
+    border-radius: 5px;
+    color: #001222;
+    font-size: 16px;
+}
+
+.authlab-faq-wrap select.filter-category:focus {
+    box-shadow: none;
+}
+
+.authlab-faq-wrap .accordion-item {
+    border-radius: 10px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px #FFF inset;
+}
+
+.authlab-faq-wrap .accordion-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.authlab-faq-wrap .accordion-header {
+    cursor: pointer;
+    padding: 20px 35px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #000;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.authlab-faq-wrap .accordion-header .icon {
+    position: relative;
+    color: #00295A;
+    margin-left: 15px;
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+}
+
+.authlab-faq-wrap .accordion-header .icon::before,
+.authlab-faq-wrap .accordion-header .icon::after {
+    content: '';
+    position: absolute;
+    background-color: #00295A;
+    transition: 0.3s;
+}
+
+.authlab-faq-wrap .accordion-header .icon::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translate(0, -50%);
+}
+
+.authlab-faq-wrap .accordion-header .icon::after {
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: translate(-50%, 0);
+}
+
+.authlab-faq-wrap .accordion-header.active .icon::after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.authlab-faq-wrap .accordion-content {
+    display: none;
+    padding: 0 35px 30px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/**
+    Responsive CSS
+*/
+@media (max-width: 1200px) {
+    .authlab-navigation-menu ul {
+        gap: 5px;
+    }
+
+    .authlab-navigation-menu ul li a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .authlab-integration-wrap .integration-filters {
+        flex: 0 0 30%;
+        max-width: 30%;
+        padding-right: 30px;
+    }
+
+    .authlab-integration-wrap .integration-filters li {
+        font-size: 16px;
+    }
+
+    .authlab-integration-wrap .integration-items {
+        margin: 0 -10px 0;
+    }
+
+    .authlab-integration-wrap .integration-item {
+        width: 50%;
+        padding: 0 10px 20px;
+    }
+
+    .authlab-pricing-tab.wp-block-kadence-tabs .kt-tabs-title-list {
+        justify-content: center;
+    }
+
+    .authlab-navigation-menu .navigation-wrapper {
+        position: fixed;
+        left: 0;
+        top: 32px;
+        width: 320px;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 9999;
+        padding: 60px 30px 40px;
+        transition: transform .45s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+
+    .authlab-navigation-menu .navigation-wrapper.show-panel {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .authlab-navigation-menu .navigation-overly.show-panel {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .authlab-navigation-menu .navbar-close {
+        display: block;
+    }
+
+    .authlab-navigation-menu ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .authlab-navigation-menu ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .authlab-navigation-menu ul li {
+        border-bottom: 1px solid #d8dcf0;
+    }
+
+    .authlab-navigation-menu .navbar-toggler {
+        display: flex;
+    }
+
+    .authlab-navigation-menu.color-white .navigation-wrapper {
+        background-color: #00295A;
+    }
+
+    .authlab-navigation-menu.color-white ul li {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .authlab-faq-wrap .accordion-header {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .kt-button.kt-btn-size-standard {
+        font-size: 15px;
+        padding: 18px 20px;
+    }
+
+    .authlab-integration-wrap {
+        flex-direction: column;
+    }
+
+    .authlab-integration-wrap .integration-filters ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .authlab-integration-wrap .integration-filters {
+        flex: 0 0 auto;
+        padding-right: 0;
+        padding-bottom: 35px;
+        max-width: 100%;
+    }
+
+    .authlab-demo-inner-tab ul.kt-tabs-title-list {
+        padding: 15px 15px 0;
+    }
+
+    .authlab-faq-wrap .accordion-header {
+        padding: 18px 25px;
+    }
+
+    .authlab-faq-wrap .accordion-content {
+        font-size: 15px;
+        padding: 0 25px 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .authlab-integration-wrap .integration-item {
+        width: 100%;
+    }
+
+    .authlab-faq-wrap .accordion-header {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .kt-tabs-tablet-layout-accordion > .kt-tabs-content-wrap > .kt-tabs-accordion-title {
+        margin-bottom: 5px;
+    }
+}
